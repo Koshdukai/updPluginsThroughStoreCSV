@@ -8,7 +8,7 @@ import tempfile
 from datetime import datetime
 
 # URL of the CSV file
-url = 'https://www.fullbucket.de/music/'
+store_url = 'https://www.fullbucket.de/music/'
 # this is the variable to change if you want to keep updated any of these plugin sources instead:
 #url = 'http://getdunne.net/Krakli/'
 #url = 'http://getdunne.net/GyL/'
@@ -30,7 +30,7 @@ def detect_encoding(file_path):
 		result = chardet.detect(f.read())
 	return result['encoding']
 
-csv_url = f"{url}store.csv"
+csv_url = f"{store_url}store.csv"
 print(f"\nUsing {csv_url}\n")
 # Download CSV file
 response = requests.get(csv_url)

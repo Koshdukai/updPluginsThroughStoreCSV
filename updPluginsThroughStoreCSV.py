@@ -53,7 +53,8 @@ for index, row in df.iterrows():
 	description = sanitize_filename(row['desc']).replace(' Simulation', '').replace('Korg', 'KORG')
 	
 	#Customize some of the descriptions for nicer sub-folder names
-	description = description.replace('Rhythm Machine', 'KORG Mini Pops-7 Rhythm Machine (1966)')
+	if plugin == "Bucket Pops":
+		description = description.replace('Rhythm Machine', 'KORG Mini Pops-7 Rhythm Machine (1966)')
 	plugin_folder = f"{description} = {plugin}"
 
 	# Create sub-folder if not exists
